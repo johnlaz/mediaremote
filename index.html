@@ -61,6 +61,14 @@ h1{font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(38px,5vw
 }
 .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 34px rgba(212,175,55,.32);}
 .btn-primary svg{width:18px;height:18px;}
+.btn-secondary-dl{
+  display:inline-flex;align-items:center;gap:10px;background:var(--surface2);color:var(--text);
+  padding:16px 28px;border-radius:14px;font-weight:700;font-size:15.5px;text-decoration:none;
+  border:1px solid var(--border2);box-shadow:0 4px 16px rgba(0,0,0,.25);
+  transition:transform .18s,box-shadow .18s,border-color .18s;
+}
+.btn-secondary-dl:hover{transform:translateY(-2px);border-color:rgba(212,175,55,.3);box-shadow:0 8px 24px rgba(0,0,0,.35);}
+.btn-secondary-dl svg{width:18px;height:18px;}
 .hero-meta{font-family:'DM Mono',monospace;font-size:12px;color:var(--muted);}
 .hero-meta b{color:var(--text);font-weight:600;}
 .trust-row{display:flex;gap:22px;margin-top:36px;flex-wrap:wrap;}
@@ -175,7 +183,7 @@ footer{border-top:1px solid var(--border2);padding:36px 0;}
     <div class="nav-links">
       <a href="#features">Features</a>
       <a href="#setup">Setup</a>
-      <a href="assets/mediaremote.zip" class="nav-cta">Download</a>
+      <a href="#downloads" class="nav-cta">Download</a>
     </div>
   </nav>
 </header>
@@ -196,10 +204,14 @@ footer{border-top:1px solid var(--border2);padding:36px 0;}
         <div class="hero-actions">
           <a href="assets/mediaremote.zip" class="btn-primary">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            Download for Windows
+            Media Remote
           </a>
-          <span class="hero-meta">No install wizard · <b>Setup.bat</b> does it in one click</span>
+          <a href="assets/LMCremote.zip" class="btn-secondary-dl">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            LMC Remote
+          </a>
         </div>
+        <div class="hero-meta">Includes <b>TCL TV + Sonos</b> control · Same app, expanded room</div>
         <div class="trust-row">
           <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5.4 3.6 9 8 10 4.4-1 8-4.6 8-10V6z"/></svg> Local network only — nothing leaves your house</div>
           <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> Runs in the tray, starts with Windows</div>
@@ -317,13 +329,19 @@ footer{border-top:1px solid var(--border2);padding:36px 0;}
 
   <!-- ══ Final CTA ══ -->
   <section class="cta-section">
-    <div class="cta-box">
-      <h2>Ready when you are.</h2>
-      <p class="section-sub">Free, self-hosted, and it stays on your own network the whole time.</p>
-      <a href="assets/mediaremote.zip" class="btn-primary">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-        Download Media Remote
-      </a>
+    <div class="cta-box" id="downloads">
+      <h2>Pick your build.</h2>
+      <p class="section-sub">Both are free, local-only, and deploy the same way. The LMC build adds a dedicated room tab for TCL TV and Sonos control.</p>
+      <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+        <a href="assets/mediaremote.zip" class="btn-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Media Remote v5.5
+        </a>
+        <a href="assets/LMCremote.zip" class="btn-secondary-dl">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          LMC Remote
+        </a>
+      </div>
     </div>
   </section>
 
@@ -338,7 +356,7 @@ footer{border-top:1px solid var(--border2);padding:36px 0;}
     <div class="footer-links">
       <a href="#features">Features</a>
       <a href="#setup">Setup</a>
-      <a href="assets/mediaremote.zip">Download</a>
+      <a href="#downloads">Download</a>
     </div>
   </div>
 </footer>
