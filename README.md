@@ -1,58 +1,48 @@
-# Media Remote — Landing Page
+# LMC Remote — Landing Page
 
-Single-file landing page for Media Remote, matching the Lazzaro Standard
-design language (dark, gold/teal, Playfair Display + DM Sans) used across
-the rest of the portfolio.
+Single-file landing page for both LMC Remote and Media Remote, matching the
+Lazzaro Standard design language across the portfolio.
 
 ## Deploy
 
 ```
 johnlaz.github.io/mediaremote/
-├── index.html              ← this landing page
+├── index.html
 └── assets/
-    └── mediaremote.zip     ← the downloadable app package
+    ├── LMCremote.zip           ← LMC Remote (full room build)
+    ├── mediaremote.zip         ← Media Remote (PC only)
+    ├── screenshot-room.png     ← Room tab screenshot (hero image)
+    └── screenshot-media.png    ← Media PC tab screenshot (hero image)
 ```
 
-Push both to the `mediaremote` folder in your GitHub Pages repo. No build
-step — `index.html` is plain HTML/CSS, no dependencies beyond two Google
-Fonts loaded via `<link>`.
+The two screenshots are referenced by the page but NOT included in this zip
+since they come from your own device. Grab them from the uploads in this
+session and drop them in assets/ alongside the zip files. They display
+side-by-side in the hero on desktop, just the Room tab on mobile.
 
-## Updating the download link
+## Updating for a new build
 
-Every download button points to the relative path `assets/mediaremote.zip`.
-To ship a new version:
-
-1. Replace `assets/mediaremote.zip` with the new build
-2. Update the version badge in the hero (`v5.3 · Windows · runs locally`)
-   and the phone mockup's status line (`v5.3`) to match
-3. Nothing else needs to change — same filename, same links
+1. Replace the relevant zip in `assets/`
+2. Update version badge in the hero eyebrow (`v5.6 · Windows · fully local`)
+3. If the feature list changed, update the `<ul class="feature-list">` inside
+   the relevant product card
 
 ## Structure
 
 | Section | What it is |
 |---|---|
-| Header | Sticky nav, brand mark, Download button |
-| Hero | Headline + CTA on the left, phone mockup on the right |
-| Features | 4 cards — Kodi, Screen Mirror, customization, Copilot/Voice Access |
-| Setup | 3 numbered steps: download, run Setup.bat, open on phone |
-| Final CTA | Repeats the download button before the footer |
+| Header | Sticky nav with anchor links |
+| Hero | Headline, both download buttons, trust row, dual screenshot |
+| What's Inside | Two product cards — LMC Remote (featured) and Media Remote |
+| LMC Features | 6 feature cards covering what's new in the LMC build |
+| Setup | 3 numbered steps — same for both builds |
+| Downloads CTA | Both buttons with a one-line distinction |
 
-The phone mockup in the hero is hand-built CSS recreating the actual
-launcher grid (real tile colors, real bottom nav) — not a stock device
-illustration. If the real app's tile colors or nav icons change, update
-`.ph-tile` and `.ph-nav-item` in the `<style>` block to match, so the
-mockup stays honest to the current build.
+## Screenshots
 
-## Editing copy
-
-All text lives directly in the HTML — no CMS, no template engine. Search
-for the section by its heading text and edit in place.
-
-## Browser support
-
-Modern evergreen browsers (Chrome, Edge, Safari, Firefox). Uses CSS Grid,
-`backdrop-filter`, and `aspect-ratio` — no polyfills included, matches the
-same baseline as the Media Remote app itself.
+The page references `assets/screenshot-room.png` and
+`assets/screenshot-media.png`. These are your own app screenshots — export
+them from the uploads in this conversation and rename accordingly.
 
 ---
-Media Remote — © 2026 LAZLAB Creations
+LMC Remote — © 2026 LAZLAB Creations
